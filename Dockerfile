@@ -7,7 +7,6 @@ RUN apt update && \
 	helm init --client-only && \
 	helm plugin install https://github.com/lrills/helm-unittest --version ${UNITTEST_VERSION} && \
 	helm plugin install --version master https://github.com/sonatype-nexus-community/helm-nexus-push.git && \
-	helm repo add evryfs-helm https://fsdepot.evry.com/nexus/repository/evryfs-helm/ && \
 	gem install c66-copper && \
 	apt-get -y clean
 COPY push_charts.sh /usr/local/bin/
