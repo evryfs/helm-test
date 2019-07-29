@@ -13,5 +13,7 @@ COPY push_charts.sh /usr/local/bin/
 ENV 	https_proxy=http://proxy.evry.com:8080 \
 	http_proxy=http://proxy.evry.com:8080 \
 	HTTP_PROXY=http://proxy.evry.com:8080 \
-	HTTPS_PROXY=http://proxy.evry.com:8080
+	HTTPS_PROXY=http://proxy.evry.com:8080 \
+	NO_PROXY=.evry.com,.finods.com,.cosng.net \
+	no_proxy=.evry.com,.finods.com,.cosng.net
 CMD ["/test.sh"]

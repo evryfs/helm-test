@@ -10,11 +10,7 @@ helm nexus-push evryfs-helm login -u $USERNAME -p $PASSWORD
 function pushChart {
   echo "Processing `pwd`"
   helm package --save=false .
-  CHART_VERSION=$(yq read Chart.yaml version)
-  CHART_NAME=$(yq read Chart.yaml name)
-  #ls -l ${CHART_NAME}-${CHART_VERSION}.tgz
-  #cloudctl catalog load-chart --archive ${CHART_NAME}-${CHART_VERSION}.tgz
-  helm nexus-push evryfs-helm .
+  USERNAME="" helm nexus-push evryfs-helm .
 }
 
 for chart in ${CHARTS_PATH}/*; do (cd "$chart" && pushChart); done
