@@ -10,6 +10,7 @@ RUN apt update && \
 	helm repo add evryfs-helm https://fsdepot.evry.com/nexus/repository/evryfs-helm/ && \
 	gem install c66-copper && \
 	apt-get -y clean
+COPY push_charts.sh /usr/local/bin/
 ENV 	https_proxy=http://proxy.evry.com:8080 \
 	http_proxy=http://proxy.evry.com:8080 \
 	HTTP_PROXY=http://proxy.evry.com:8080 \
