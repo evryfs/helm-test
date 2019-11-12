@@ -1,5 +1,5 @@
 FROM evryfs/docker-baseimage:latest
-ENV HELM_VERSION=v2.15.2 UNITTEST_VERSION=v0.1.5
+ENV HELM_VERSION=v2.16.1 UNITTEST_VERSION=v0.1.5
 COPY test.sh /
 RUN apt update && \
 	apt install -y git ruby-dev make gcc && \
