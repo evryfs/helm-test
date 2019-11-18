@@ -1,9 +1,9 @@
 FROM evryfs/docker-baseimage:latest
-ENV HELM_VERSION=v2.16.1 UNITTEST_VERSION=v0.1.5
+ENV HELM_VERSION=v3.0.0 UNITTEST_VERSION=v0.1.5
 COPY test.sh /
 RUN apt update && \
 	apt install -y git ruby-dev make gcc && \
-	wget -qO- https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz | tar xzv --strip-components=1 -C /usr/local/bin/ && \
+	wget -qO- https://get.helm.sh/helm-${HELM-VERSION}-linux-amd64.tar.gz | tar xzv --strip-components=1 -C /usr/local/bin/ && \
 	helm init --client-only && \
 	helm plugin install https://github.com/lrills/helm-unittest --version ${UNITTEST_VERSION} && \
 	helm plugin install --version master https://github.com/sonatype-nexus-community/helm-nexus-push.git && \
