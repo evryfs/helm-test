@@ -1,4 +1,4 @@
-FROM evryfs/docker-baseimage:latest
+FROM quay.io/evryfs/base-ubuntu:latest
 ENV HELM_VERSION=v3.0.1 UNITTEST_VERSION=v0.1.5
 COPY test.sh /
 RUN apt update && \
