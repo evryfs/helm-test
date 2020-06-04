@@ -1,5 +1,5 @@
 FROM quay.io/evryfs/base-ubuntu:master
-ENV HELM_VERSION=v3.2.1 UNITTEST_VERSION=v0.1.5
+ENV HELM_VERSION=v3.2.2 UNITTEST_VERSION=v0.1.5
 COPY test.sh /
 RUN apt update && \
 	apt install -y git ruby-dev make gcc && \
