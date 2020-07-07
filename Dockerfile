@@ -1,5 +1,5 @@
 FROM quay.io/evryfs/base-ubuntu:focal-20200703
-ENV HELM_VERSION=v3.2.2 UNITTEST_VERSION=v0.1.5
+ENV HELM_VERSION=v3.2.4 UNITTEST_VERSION=v0.1.5
 COPY test.sh /
 RUN apt update && \
 	apt install -y git ruby-dev make gcc && \
