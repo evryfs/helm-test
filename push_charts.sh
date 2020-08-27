@@ -9,7 +9,7 @@ helm nexus-push evryfs-helm login -u $USERNAME -p $PASSWORD
 
 function pushChart {
   echo "Processing `pwd`"
-  helm package --save=false .
+  helm package .
   USERNAME="" helm nexus-push evryfs-helm .
 }
 
