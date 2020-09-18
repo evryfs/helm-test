@@ -1,5 +1,5 @@
 FROM quay.io/evryfs/base-ubuntu:focal-20200916
-ENV HELM_VERSION=v3.3.0
+ENV HELM_VERSION=v3.3.2
 COPY test.sh /
 RUN apt update && \
 	apt install -y git && \
