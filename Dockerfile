@@ -1,4 +1,4 @@
-FROM quay.io/evryfs/base-ubuntu:focal-20200729
+FROM quay.io/evryfs/base-ubuntu:focal-20200916
 ENV HELM_VERSION=v3.3.0
 COPY test.sh /
 RUN apt update && \
